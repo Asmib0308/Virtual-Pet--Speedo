@@ -23,14 +23,18 @@ function setup() {
 function draw() {  
   background(46,139,87)
 
-  if(keyWentDown(UP_ARROW)){
-    writeStock(food)
-    //food = food - 1
-    dog.addImage(happyDog)
-  }
-  if(keyWentUp(UP_ARROW)){
-    dog.addImage(dogImg);
-  }
+  if(food > 0){
+
+    if(keyWentDown(UP_ARROW)){
+      writeStock(food)
+      //food = food - 1
+      dog.addImage(happyDog)
+    }
+  }  
+    if(keyWentUp(UP_ARROW)){
+      dog.addImage(dogImg);
+    }
+  
 
   drawSprites();
   //add styles here
